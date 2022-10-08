@@ -14,69 +14,99 @@ function App() {
 
 
   const calcular = () => {
-    const valor = (parseFloat(num1) * 1.05) / parseFloat(num2)
-    var valor1 = parseFloat(valor.toFixed(2))
-    setResultado(valor1)
-    const tip = (parseFloat(num1) * 0.05) / parseFloat(num2)
-    var valor2 = parseFloat(tip.toFixed(2))
-    setTip(valor2)
-    if (color === true)
-      setColor(true)
-  }
+    if (num2 === 0 || num2 === "") {
+      alert('Impossível dividir por zero');
+    } else {
+      const valor = (parseFloat(num1) * 1.05) / parseFloat(num2)
+      var valor1 = parseFloat(valor.toFixed(2))
+      setResultado(valor1)
+      const tip = (parseFloat(num1) * 0.05) / parseFloat(num2)
+      var valor2 = parseFloat(tip.toFixed(2))
+      setTip(valor2)
+      if (color === true)
+        setColor(true)
+    }
 
+  }
   const calcular2 = () => {
-    const valor = (parseFloat(num1) * 1.1) / parseFloat(num2)
-    var valor1 = parseFloat(valor.toFixed(2))
-    setResultado(valor1)
-    const tip = (parseFloat(num1) * 0.10) / parseFloat(num2)
-    var valor2 = parseFloat(tip.toFixed(2))
-    setTip(valor2)
-    if (color === true)
-      setColor(false)
+    if (num2 === 0 || num2 === "") {
+      alert('Impossível dividir por zero');
+    } else {
+      const valor = (parseFloat(num1) * 1.1) / parseFloat(num2)
+      var valor1 = parseFloat(valor.toFixed(2))
+      setResultado(valor1)
+      const tip = (parseFloat(num1) * 0.10) / parseFloat(num2)
+      var valor2 = parseFloat(tip.toFixed(2))
+      setTip(valor2)
+      if (color === true)
+        setColor(false)
+    }
   }
 
   const calcular3 = () => {
-    const valor = (parseFloat(num1) * 1.15) / parseFloat(num2)
-    var valor1 = parseFloat(valor.toFixed(2))
-    setResultado(valor1)
-    const tip = (parseFloat(num1) * 0.15) / parseFloat(num2)
-    var valor2 = parseFloat(tip.toFixed(2))
-    setTip(valor2)
-    if (color === true)
-      setColor(false)
+    if (num2 === 0 || num2 === "") {
+      alert('Impossível dividir por zero');
+    } else {
+      const valor = (parseFloat(num1) * 1.15) / parseFloat(num2)
+      var valor1 = parseFloat(valor.toFixed(2))
+      setResultado(valor1)
+      const tip = (parseFloat(num1) * 0.15) / parseFloat(num2)
+      var valor2 = parseFloat(tip.toFixed(2))
+      setTip(valor2)
+      if (color === true)
+        setColor(false)
+    }
   }
-
 
   const calcular4 = () => {
-    const valor = (parseFloat(num1) * 1.25) / parseFloat(num2)
-    var valor1 = parseFloat(valor.toFixed(2))
-    setResultado(valor1)
-    const tip = (parseFloat(num1) * 0.25) / parseFloat(num2)
-    var valor2 = parseFloat(tip.toFixed(2))
-    setTip(valor2)
-    if (color === true)
-      setColor(false)
+    if (num2 === 0 || num2 === "") {
+      alert('Impossível dividir por zero');
+    } else {
+      const valor = (parseFloat(num1) * 1.25) / parseFloat(num2)
+      var valor1 = parseFloat(valor.toFixed(2))
+      setResultado(valor1)
+      const tip = (parseFloat(num1) * 0.25) / parseFloat(num2)
+      var valor2 = parseFloat(tip.toFixed(2))
+      setTip(valor2)
+      if (color === true)
+        setColor(false)
+    }
   }
 
-  const calcular5= () => {
-    const valor = (parseFloat(num1) * 1.5) / parseFloat(num2)
-    var valor1 = parseFloat(valor.toFixed(2))
-    setResultado(valor1)
-    const tip = (parseFloat(num1) * 0.5) / parseFloat(num2)
-    var valor2 = parseFloat(tip.toFixed(2))
-    setTip(valor2)
-    if (color === true)
-      setColor(false)
+  const calcular5 = () => {
+    if (num2 === 0 || num2 === "") {
+      alert('Impossível dividir por zero');
+    } else {
+      const valor = (parseFloat(num1) * 1.5) / parseFloat(num2)
+      var valor1 = parseFloat(valor.toFixed(2))
+      setResultado(valor1)
+      const tip = (parseFloat(num1) * 0.5) / parseFloat(num2)
+      var valor2 = parseFloat(tip.toFixed(2))
+      setTip(valor2)
+      if (color === true)
+        setColor(false)
+    }
   }
-  const calcular6= () => {
-    const percentual = parseFloat(num3/100)
-    const valor = (parseFloat(num1)*(1+percentual)) / parseFloat(num2)
-    var valor1 = parseFloat(valor.toFixed(2))
-    setResultado(valor1)
-    const tip = (parseFloat(num1) * (num3/100)) / parseFloat(num2)
-    var valor2 = parseFloat(tip.toFixed(2))
-    setTip(valor2)
-   
+  const calcular6 = () => {
+    if (num2 === 0 || num2 === "") {
+      alert('Impossível dividir por zero');
+    } else {
+      const percentual = parseFloat(num3 / 100)
+      const valor = (parseFloat(num1) * (1 + percentual)) / parseFloat(num2)
+      var valor1 = parseFloat(valor.toFixed(2))
+      setResultado(valor1)
+      const tip = (parseFloat(num1) * (num3 / 100)) / parseFloat(num2)
+      var valor2 = parseFloat(tip.toFixed(2))
+      setTip(valor2)
+
+    }
+  }
+  const resetar = () => {
+    setNum1('')
+    setNum2('')
+    setNum3('')
+    setResultado('')
+    setTip('')
   }
 
   return (
@@ -109,18 +139,18 @@ function App() {
             isColor={color}
           >15%</Button>
           <Button
-           onClick={() => { calcular4() }}
-           isColor={color}        
+            onClick={() => { calcular4() }}
+            isColor={color}
           >25%</Button>
           <Button
-           onClick={() => { calcular5() }}
-           isColor={color}
+            onClick={() => { calcular5() }}
+            isColor={color}
           >50%</Button>
           <Input
-          type='number'
-           value={num3}
-           onChange={(e) => setNum3(e.target.value)}
-           onClick={() => { calcular6() }}
+            type='number'
+            value={num3}
+            onChange={(e) => setNum3(e.target.value)}
+            onClick={() => { calcular6() }}
           ></Input>
           <Label2> Number of People</Label2>
           <Div8>
@@ -148,7 +178,8 @@ function App() {
           </Div6>
           <Button2
             type="reset"
-            >
+            onClick={resetar}
+          >
             RESET</Button2>
         </Div4>
       </Div2>
